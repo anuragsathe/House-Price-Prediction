@@ -25,4 +25,4 @@ Garage = st.number_input("Garage",min_value=0,max_value=5,step=1)
 if st.button("Predict Price"):
     features = np.array([[lot_area,year_bulit,full_bath,bedroom,Garage]])
     prediction = model.predict(features)
-    st.success(f"Estimated House Price: $ {prediction[0]:,.2f}")
+    st.success(f"Estimated House Price: $ {prediction[0][0]:,.2f}")
